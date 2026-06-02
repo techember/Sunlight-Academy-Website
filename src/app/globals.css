@@ -2,25 +2,87 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a; /* Slate 900 for modern feel */
+  
+  /* Brand Colors */
+  --primary: 37 99 235; /* RGB for #2563eb (Royal Blue) */
+  --primary-dark: 30 58 138; /* RGB for #1e3a8a (Dark Royal Blue) */
+  --secondary: 14 165 233; /* RGB for #0ea5e9 (Sky Blue) */
+  --accent: 234 179 8; /* RGB for #eab308 (Golden Yellow) */
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  
+  --color-primary: rgb(var(--primary));
+  --color-primary-dark: rgb(var(--primary-dark));
+  --color-secondary: rgb(var(--secondary));
+  --color-accent: rgb(var(--accent));
+  
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+  
+  /* Smooth hardware-accelerated animations */
+  --animate-fade-in: fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-up: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(12px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimized, lightweight card styling to replace heavy glassmorphism */
+.glassmorphism {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+/* Custom Scrollbar - Simple and lightweight */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Optimized hardware-accelerated gradient definitions */
+.gradient-primary {
+  background: linear-gradient(135deg, rgb(var(--primary-dark)) 0%, rgb(var(--primary)) 100%);
+  will-change: transform;
+}
+
+.gradient-sky {
+  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--secondary)) 100%);
+  will-change: transform;
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, rgb(var(--accent)) 0%, #facc15 100%);
+  will-change: transform;
+}
+
+.gradient-soft {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
 }

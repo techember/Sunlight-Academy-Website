@@ -4,7 +4,7 @@ import React from "react";
 import { 
   Eye, 
   Target, 
-  BookOpen, 
+  BookOpen,
   ChevronRight, 
   Award, 
   ShieldAlert, 

@@ -5,10 +5,10 @@
   --foreground: #0f172a; /* Slate 900 for modern feel */
   
   /* Brand Colors */
-  --primary: 37 99 235; /* RGB for #2563eb (Royal Blue) */
-  --primary-dark: 30 58 138; /* RGB for #1e3a8a (Dark Royal Blue) */
-  --secondary: 14 165 233; /* RGB for #0ea5e9 (Sky Blue) */
-  --accent: 234 179 8; /* RGB for #eab308 (Golden Yellow) */
+  --primary: 253 184 19; /* RGB for #FDB813 (Sunlight Gold) */
+  --primary-dark: 224 91 0; /* RGB for #E05B00 (Burnt Orange for high contrast) */
+  --secondary: 255 193 7; /* RGB for #FFC107 (Bright Yellow) */
+  --accent: 255 140 66; /* RGB for #FF8C42 (Deep Orange) */
 }
 
 @theme {
@@ -49,7 +49,7 @@ body {
 /* Optimized, lightweight card styling to replace heavy glassmorphism */
 .glassmorphism {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #fcf7eb;
 }
 
 /* Custom Scrollbar - Simple and lightweight */
@@ -57,14 +57,14 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #fdfbf7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #fcd34d;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #f59e0b;
 }
 
 /* Optimized hardware-accelerated gradient definitions */
@@ -79,10 +79,10 @@ body {
 }
 
 .gradient-gold {
-  background: linear-gradient(135deg, rgb(var(--accent)) 0%, #facc15 100%);
+  background: linear-gradient(135deg, rgb(var(--accent)) 0%, #ffc107 100%);
   will-change: transform;
 }
 
 .gradient-soft {
-  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+  background: linear-gradient(180deg, #fffdf9 0%, #fffbfa 100%);
 }

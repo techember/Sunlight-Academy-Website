@@ -25,7 +25,7 @@ const MEGA_MENU_COURSES = [
     tagline: "Engineering Entrance Program",
     desc: "Comprehensive coaching for JEE Main & Advanced. Led by Ex-Allen & Ex-NITian mentors to build problem-solving speed and accuracy.",
     icon: Award,
-    iconColor: "text-blue-600 bg-blue-50",
+    iconColor: "text-accent bg-orange-50/70",
     href: "/courses?tab=jee",
     classes: [
       { name: "Class 11", href: "/courses?tab=jee&class=11" },
@@ -39,7 +39,7 @@ const MEGA_MENU_COURSES = [
     tagline: "Medical Entrance Program",
     desc: "Rigorous NCERT-focused coaching designed for AIIMS and premier government medical colleges, specializing in Bio, Chem, and Physics.",
     icon: Stethoscope,
-    iconColor: "text-sky-600 bg-sky-50",
+    iconColor: "text-primary-dark bg-amber-50/80",
     href: "/courses?tab=neet",
     classes: [
       { name: "Class 11", href: "/courses?tab=neet&class=11" },
@@ -53,7 +53,7 @@ const MEGA_MENU_COURSES = [
     tagline: "Class 6-10 Pre-Prep",
     desc: "Developing analytical logic, advanced mathematics, and strong science fundamentals early. Building future readiness.",
     icon: Sparkles,
-    iconColor: "text-amber-500 bg-amber-50",
+    iconColor: "text-accent bg-orange-50/70",
     href: "/courses?tab=foundation",
     classes: [
       { name: "Class 6", href: "/courses?tab=foundation&class=6" },
@@ -72,11 +72,12 @@ export default function Navbar() {
   const [activeMobileCategory, setActiveMobileCategory] = useState<string | null>(null);
   const pathname = usePathname();
 
-  // Navigation Links - Gallery is completely removed
+  // Navigation Links - Replace Gallery with Careers
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Faculty", href: "/faculty" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -120,13 +121,13 @@ export default function Navbar() {
     <nav className="sticky top-0 z-40 w-full bg-white border-b border-slate-200 shadow-sm">
       
       {/* LEVEL 1: TOP ANNOUNCEMENT BAR (Exactly 40px) */}
-      <div className="bg-primary text-white text-xs h-[40px] flex items-center w-full px-4 sm:px-6 lg:px-8 border-b border-blue-700/30">
+      <div className="bg-primary-dark text-white text-xs h-[40px] flex items-center w-full px-4 sm:px-6 lg:px-8 border-b border-orange-700/30">
         <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1 font-medium">
-              <Phone className="h-3.5 w-3.5 text-accent" /> +91 8709667059
+              <Phone className="h-3.5 w-3.5 text-secondary" /> +91 8709667059
             </span>
-            <span className="hidden sm:inline w-1.5 h-1.5 rounded-full bg-blue-300"></span>
+            <span className="hidden sm:inline w-1.5 h-1.5 rounded-full bg-white/60"></span>
             <span className="hidden sm:inline font-medium">Thana Mor, Station Road, Madhubani, Bihar</span>
           </div>
           <div className="flex items-center gap-4">
@@ -154,8 +155,8 @@ export default function Navbar() {
               href="/"
               className={`px-3 py-2 rounded-md text-sm font-bold transition-all duration-200 ${
                 pathname === "/" 
-                  ? "text-primary bg-blue-50/50" 
-                  : "text-slate-700 hover:text-primary hover:bg-slate-50"
+                  ? "text-primary-dark bg-amber-50" 
+                  : "text-slate-700 hover:text-primary-dark hover:bg-slate-50"
               }`}
             >
               Home
@@ -170,8 +171,8 @@ export default function Navbar() {
               <button
                 className={`px-3 py-2 rounded-md text-sm font-bold flex items-center gap-1 transition-all duration-200 cursor-pointer ${
                   pathname.startsWith("/courses")
-                    ? "text-primary bg-blue-50/50"
-                    : "text-slate-700 hover:text-primary hover:bg-slate-50"
+                    ? "text-primary-dark bg-amber-50"
+                    : "text-slate-700 hover:text-primary-dark hover:bg-slate-50"
                 }`}
               >
                 Courses
@@ -179,15 +180,15 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Other links (Gallery is removed) */}
+            {/* Other links */}
             {navLinks.slice(1).map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
                 className={`px-3 py-2 rounded-md text-sm font-bold transition-all duration-200 ${
                   pathname === link.href
-                    ? "text-primary bg-blue-50/50"
-                    : "text-slate-700 hover:text-primary hover:bg-slate-50"
+                    ? "text-primary-dark bg-amber-50"
+                    : "text-slate-700 hover:text-primary-dark hover:bg-slate-50"
                 }`}
               >
                 {link.name}
@@ -199,23 +200,23 @@ export default function Navbar() {
           <div className="hidden xl:flex w-[320px] flex-shrink-0 items-center justify-end gap-3">
             <Link
               href="/contact?enquire=counsel"
-              className="bg-accent hover:bg-yellow-500 text-slate-900 text-xs font-bold py-2.5 px-4 rounded-lg shadow-sm hover:shadow transition-all duration-200 flex items-center gap-1"
+              className="bg-secondary hover:bg-primary text-slate-900 text-xs font-bold py-2.5 px-4 rounded-lg shadow-sm hover:shadow transition-all duration-200 flex items-center gap-1"
             >
               <BookOpen className="h-3.5 w-3.5" /> Book Counselling
             </Link>
             <Link
               href="/contact?enquire=enroll"
-              className="bg-primary hover:bg-primary-dark text-white text-xs font-bold py-2.5 px-4 rounded-lg shadow-sm hover:shadow transition-all duration-200"
+              className="bg-primary-dark hover:bg-accent text-white text-xs font-bold py-2.5 px-4 rounded-lg shadow-sm hover:shadow transition-all duration-200"
             >
               Enroll Now
             </Link>
           </div>
-
+ 
           {/* Mobile hamburger menu button */}
           <div className="xl:hidden flex items-center gap-2">
             <Link
               href="/contact?enquire=enroll"
-              className="bg-primary hover:bg-primary-dark text-white text-xs font-bold py-2 px-3 rounded-lg shadow-sm transition-all"
+              className="bg-primary-dark hover:bg-accent text-white text-xs font-bold py-2 px-3 rounded-lg shadow-sm transition-all"
             >
               Enroll
             </Link>
@@ -308,7 +309,7 @@ export default function Navbar() {
               href="/"
               onClick={() => setIsOpen(false)}
               className={`px-4 py-3 rounded-lg font-bold text-sm transition-colors ${
-                pathname === "/" ? "bg-blue-50 text-primary" : "text-slate-700 hover:bg-slate-50"
+                pathname === "/" ? "bg-amber-50 text-primary-dark" : "text-slate-700 hover:bg-slate-50"
               }`}
             >
               Home
@@ -319,7 +320,7 @@ export default function Navbar() {
               <button
                 onClick={() => setActiveMobileCategory(activeMobileCategory === "courses" ? null : "courses")}
                 className={`px-4 py-3 rounded-lg font-bold text-sm flex justify-between items-center transition-colors cursor-pointer ${
-                  pathname.startsWith("/courses") ? "bg-blue-50 text-primary" : "text-slate-700 hover:bg-slate-50"
+                  pathname.startsWith("/courses") ? "bg-amber-50 text-primary-dark" : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 Courses
@@ -328,7 +329,7 @@ export default function Navbar() {
 
               {/* Mobile menu expanded courses */}
               <div 
-                className={`overflow-hidden bg-slate-50/50 rounded-lg mx-2 my-1 pl-4 flex flex-col border-l-2 border-primary/20 transition-all duration-300 ${
+                className={`overflow-hidden bg-slate-50/50 rounded-lg mx-2 my-1 pl-4 flex flex-col border-l-2 border-primary-dark/25 transition-all duration-300 ${
                   activeMobileCategory === "courses" ? "max-h-[500px] py-2" : "max-h-0"
                 }`}
               >
@@ -343,7 +344,7 @@ export default function Navbar() {
                           key={classIdx}
                           href={cls.href}
                           onClick={() => setIsOpen(false)}
-                          className="text-[11px] font-bold text-slate-655 hover:text-primary py-0.5"
+                          className="text-[11px] font-bold text-slate-655 hover:text-primary-dark py-0.5"
                         >
                           {cls.name}
                         </Link>
@@ -360,7 +361,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`px-4 py-3 rounded-lg font-bold text-sm transition-colors ${
-                  pathname === link.href ? "bg-blue-50 text-primary" : "text-slate-700 hover:bg-slate-50"
+                  pathname === link.href ? "bg-amber-50 text-primary-dark" : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 {link.name}
@@ -374,14 +375,14 @@ export default function Navbar() {
           <Link
             href="/contact?enquire=counsel"
             onClick={() => setIsOpen(false)}
-            className="bg-accent hover:bg-yellow-500 text-slate-900 text-xs font-bold py-3 px-4 rounded-xl shadow-sm text-center flex items-center justify-center gap-1"
+            className="bg-secondary hover:bg-primary text-slate-900 text-xs font-bold py-3 px-4 rounded-xl shadow-sm text-center flex items-center justify-center gap-1"
           >
             <BookOpen className="h-4 w-4" /> Book Counselling
           </Link>
           <Link
             href="/contact?enquire=enroll"
             onClick={() => setIsOpen(false)}
-            className="bg-primary hover:bg-primary-dark text-white text-xs font-bold py-3 px-4 rounded-xl shadow-sm text-center"
+            className="bg-primary-dark hover:bg-accent text-white text-xs font-bold py-3 px-4 rounded-xl shadow-sm text-center"
           >
             Enroll Now
           </Link>

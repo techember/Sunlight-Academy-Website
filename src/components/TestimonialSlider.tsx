@@ -46,7 +46,7 @@ export default function TestimonialSlider() {
   return (
     <div className="relative w-full max-w-4xl mx-auto px-4 py-8">
       {/* Curved Quote graphic in background */}
-      <Quote className="absolute top-0 left-4 h-24 w-24 text-blue-50 opacity-60 pointer-events-none -z-10" />
+      <Quote className="absolute top-0 left-4 h-24 w-24 text-amber-50/70 opacity-60 pointer-events-none -z-10" />
 
       {/* Main Slide Card Container */}
       <div className="relative overflow-hidden bg-white border border-slate-100 rounded-2xl shadow-xl p-8 md:p-12 min-h-[300px] flex flex-col justify-between">

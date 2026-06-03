@@ -128,7 +128,7 @@ function ContactContent() {
                 
                 <div className="flex flex-col gap-5">
                   <div className="flex items-start gap-4">
-                    <div className="h-10 w-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center flex-shrink-0">
+                    <div className="h-10 w-10 rounded-xl bg-amber-50 text-primary-dark flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
@@ -140,24 +140,24 @@ function ContactContent() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="h-10 w-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center flex-shrink-0">
+                    <div className="h-10 w-10 rounded-xl bg-amber-50 text-primary-dark flex items-center justify-center flex-shrink-0">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
                       <span className="text-xs text-slate-400 font-bold block uppercase tracking-wider">Mobile Number</span>
-                      <a href="tel:8709667059" className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors mt-0.5 block">
+                      <a href="tel:8709667059" className="text-sm font-semibold text-slate-700 hover:text-primary-dark transition-colors mt-0.5 block">
                         +91 8709667059
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="h-10 w-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center flex-shrink-0">
+                    <div className="h-10 w-10 rounded-xl bg-amber-50 text-primary-dark flex items-center justify-center flex-shrink-0">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
                       <span className="text-xs text-slate-400 font-bold block uppercase tracking-wider">Email Address</span>
-                      <a href="mailto:cdpsjarya@gmail.com" className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors mt-0.5 block">
+                      <a href="mailto:cdpsjarya@gmail.com" className="text-sm font-semibold text-slate-700 hover:text-primary-dark transition-colors mt-0.5 block">
                         cdpsjarya@gmail.com
                       </a>
                     </div>
@@ -168,7 +168,7 @@ function ContactContent() {
                 <div className="grid grid-cols-2 gap-3 border-t border-slate-100 pt-6">
                   <a
                     href="tel:8709667059"
-                    className="bg-primary hover:bg-primary-dark text-white text-xs font-bold py-3 px-4 rounded-xl shadow-sm text-center flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="bg-primary-dark hover:bg-accent text-white text-xs font-bold py-3 px-4 rounded-xl shadow-sm text-center flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Phone className="h-4 w-4" /> Call Now
                   </a>
@@ -192,14 +192,14 @@ function ContactContent() {
                     href="https://maps.google.com/?q=Thana+Mor+Station+Road+Madhubani+Bihar" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-xs text-primary font-bold hover:underline flex items-center gap-1"
+                    className="text-xs text-primary-dark font-bold hover:underline flex items-center gap-1"
                   >
                     <Navigation className="h-3.5 w-3.5" /> Navigate
                   </a>
                 </div>
                 
                 {/* Simulated Map SVG */}
-                <div className="h-48 rounded-2xl bg-sky-100 border border-sky-200 overflow-hidden relative flex items-center justify-center">
+                <div className="h-48 rounded-2xl bg-amber-50 border border-amber-200 overflow-hidden relative flex items-center justify-center">
                   {/* Grid Lines representing Roads */}
                   <svg className="absolute inset-0 w-full h-full stroke-white/60" strokeWidth="6">
                     <line x1="0" y1="50" x2="300" y2="50" />
@@ -213,8 +213,8 @@ function ContactContent() {
 
                   {/* Marker Pin */}
                   <div className="relative z-10 flex flex-col items-center animate-bounce">
-                    <MapPin className="h-8 w-8 text-primary fill-blue-200 filter drop-shadow-sm" />
-                    <span className="bg-primary text-white text-[9px] font-black uppercase px-2 py-0.5 rounded shadow-lg tracking-wider border border-white/20 whitespace-nowrap mt-1">
+                    <MapPin className="h-8 w-8 text-primary-dark fill-amber-200 filter drop-shadow-sm" />
+                    <span className="bg-primary-dark text-white text-[9px] font-black uppercase px-2 py-0.5 rounded shadow-lg tracking-wider border border-white/20 whitespace-nowrap mt-1">
                       Sunlight Academy
                     </span>
                   </div>
@@ -384,7 +384,7 @@ function ContactContent() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 rounded-xl shadow-md hover:shadow transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:bg-primary/70 disabled:cursor-not-allowed"
+                    className="w-full bg-primary-dark hover:bg-accent text-white font-bold py-4 px-6 rounded-xl shadow-md hover:shadow transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:bg-primary-dark/70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -416,7 +416,7 @@ export default function Contact() {
   return (
     <Suspense fallback={
       <div className="flex items-center justify-center min-h-screen bg-slate-50">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary border-r-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-dark border-r-transparent" />
       </div>
     }>
       <ContactContent />

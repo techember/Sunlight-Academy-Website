@@ -69,7 +69,7 @@ export default function Faculty() {
                     ) : (
                       <>
                         <span className="relative z-10">{member.name.split(" ").map(n => n[0]).join("")}</span>
-                        <span className="absolute bottom-4 text-[10px] uppercase tracking-widest text-blue-200 font-sans font-semibold">Ex-Allen</span>
+                        <span className="absolute bottom-4 text-[10px] uppercase tracking-widest text-amber-200 font-sans font-semibold">Ex-Allen</span>
                         <div className="absolute inset-0 bg-white/5 opacity-30 transform rotate-45 scale-150 pointer-events-none" />
                       </>
                     )}
@@ -88,7 +88,7 @@ export default function Faculty() {
                     <h2 className="font-display font-black text-slate-905 text-3xl mb-1">
                       {member.name}
                     </h2>
-                    <p className="text-sm font-extrabold text-primary uppercase tracking-widest">
+                    <p className="text-sm font-extrabold text-primary-dark uppercase tracking-widest">
                       {member.role}
                     </p>
                   </div>
@@ -98,7 +98,7 @@ export default function Faculty() {
                     {member.credentials.map((cred, cIdx) => (
                       <span
                         key={cIdx}
-                        className="text-xs font-bold bg-blue-50/50 border border-blue-100/50 text-primary-dark px-3 py-1.5 rounded-lg flex items-center gap-1.5"
+                        className="text-xs font-bold bg-amber-50 border border-amber-100 text-primary-dark px-3 py-1.5 rounded-lg flex items-center gap-1.5"
                       >
                         <Award className="h-4 w-4 text-accent" />
                         {cred}
@@ -109,7 +109,7 @@ export default function Faculty() {
                   {/* Expertise/Subjects tags */}
                   <div className="border-t border-slate-100 pt-6">
                     <h3 className="font-display font-extrabold text-slate-805 text-base mb-3 flex items-center gap-1.5">
-                      <Layers className="h-4.5 w-4.5 text-primary" /> Key Subject Expertise
+                      <Layers className="h-4.5 w-4.5 text-primary-dark" /> Key Subject Expertise
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {member.expertise.map((exp, eIdx) => (
@@ -126,9 +126,9 @@ export default function Faculty() {
                   {/* Teaching Philosophy */}
                   <div className="border-t border-slate-100 pt-6">
                     <h3 className="font-display font-extrabold text-slate-805 text-base mb-2 flex items-center gap-1.5">
-                      <BookOpen className="h-4.5 w-4.5 text-primary" /> Teaching Philosophy
+                      <BookOpen className="h-4.5 w-4.5 text-primary-dark" /> Teaching Philosophy
                     </h3>
-                    <p className="text-sm sm:text-base text-slate-555 font-sans italic leading-relaxed bg-blue-50/20 border-l-4 border-primary pl-4 py-2">
+                    <p className="text-sm sm:text-base text-slate-555 font-sans italic leading-relaxed bg-amber-50/30 border-l-4 border-primary-dark pl-4 py-2">
                       "{member.teachingPhilosophy}"
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export default function Faculty() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link
               href="/contact?enquire=counsel"
-              className="bg-accent hover:bg-yellow-500 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-md transition-colors text-center"
+              className="bg-secondary hover:bg-primary text-slate-905 font-bold px-8 py-3.5 rounded-xl shadow-md transition-colors text-center"
             >
               Book Counselling Session
             </Link>

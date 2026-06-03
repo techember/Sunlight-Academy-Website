@@ -82,8 +82,8 @@ export default function About() {
             
             {/* Vision Card */}
             <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 shadow-sm flex flex-col gap-6 relative overflow-hidden group hover:shadow-md transition-shadow duration-300">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-100/30 rounded-full blur-2xl pointer-events-none" />
-              <div className="p-4 rounded-2xl bg-blue-50 text-primary self-start">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-amber-100/30 rounded-full blur-2xl pointer-events-none" />
+              <div className="p-4 rounded-2xl bg-amber-50 text-primary-dark self-start">
                 <Eye className="h-8 w-8" />
               </div>
               <div className="flex flex-col gap-3 text-left">
@@ -121,7 +121,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
-            <span className="text-xs font-black text-primary uppercase tracking-widest">Our Blueprint</span>
+            <span className="text-xs font-black text-primary-dark uppercase tracking-widest">Our Blueprint</span>
             <h2 className="font-display font-extrabold text-slate-905 text-3xl sm:text-4xl">
               Teaching Methodology
             </h2>
@@ -138,7 +138,7 @@ export default function About() {
                 className="bg-white rounded-2xl border border-slate-150 p-6 shadow-sm relative flex flex-col justify-between hover:shadow-md transition-shadow duration-200 text-left"
               >
                 <div>
-                  <span className="block text-4xl font-black text-blue-100 mb-4 font-display">
+                  <span className="block text-4xl font-black text-amber-200/80 mb-4 font-display">
                     {method.step}
                   </span>
                   <h3 className="font-display font-bold text-slate-900 text-base mb-2">
@@ -160,7 +160,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-3">
-            <span className="text-xs font-black text-primary uppercase tracking-widest">Our Pillars</span>
+            <span className="text-xs font-black text-primary-dark uppercase tracking-widest">Our Pillars</span>
             <h2 className="font-display font-extrabold text-slate-905 text-3xl sm:text-4xl">
               Core Pillars of Excellence
             </h2>
@@ -171,7 +171,7 @@ export default function About() {
             
             {/* Pillar 1 */}
             <div className="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-left flex flex-col gap-4">
-              <div className="p-3 bg-blue-50 text-primary self-start rounded-xl">
+              <div className="p-3 bg-amber-50 text-primary-dark self-start rounded-xl">
                 <Sparkles className="h-6 w-6" />
               </div>
               <h3 className="font-display font-bold text-slate-900 text-xl">
@@ -184,7 +184,7 @@ export default function About() {
 
             {/* Pillar 2 */}
             <div className="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-left flex flex-col gap-4">
-              <div className="p-3 bg-blue-50 text-primary self-start rounded-xl">
+              <div className="p-3 bg-amber-50 text-primary-dark self-start rounded-xl">
                 <Award className="h-6 w-6" />
               </div>
               <h3 className="font-display font-bold text-slate-900 text-xl">
@@ -197,7 +197,7 @@ export default function About() {
 
             {/* Pillar 3 */}
             <div className="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-left flex flex-col gap-4">
-              <div className="p-3 bg-blue-50 text-primary self-start rounded-xl">
+              <div className="p-3 bg-amber-50 text-primary-dark self-start rounded-xl">
                 <Layers className="h-6 w-6" />
               </div>
               <h3 className="font-display font-bold text-slate-900 text-xl">

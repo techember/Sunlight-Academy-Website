@@ -116,8 +116,8 @@ export const FACULTY_DATA: FacultyMember[] = [
     role: "Co-Founder & Senior Faculty",
     credentials: ["Ex-NITian", "Ex-Allen Faculty", "Ex-Navodayan"],
     experience: "8+ Years of Teaching Experience",
-    expertise: ["Physics Specialist", "JEE/NEET Mentor", "Concept builder"],
-    teachingPhilosophy: "Physics is not about formulas; it's about visualizing the universe. My goal is to make every student see the simplicity behind complex physics problems.",
+    expertise: ["Mathematics Specialist", "Analytical Logic Trainer", "JEE Advanced Specialist"],
+    teachingPhilosophy: "Mathematics is the language of logic. Once you learn to think logically, math becomes a game of patterns. I train students to spot those patterns.",
     avatarSeed: "chandan"
   },
   {
@@ -125,8 +125,8 @@ export const FACULTY_DATA: FacultyMember[] = [
     role: "Co-Founder & Senior Faculty",
     credentials: ["Ex-NITian", "Ex-Allen Faculty", "Ex-Navodayan"],
     experience: "7+ Years of Teaching Experience",
-    expertise: ["Mathematics Specialist", "Analytical Logic Trainer", "JEE Advanced Specialist"],
-    teachingPhilosophy: "Mathematics is the language of logic. Once you learn to think logically, math becomes a game of patterns. I train students to spot those patterns.",
+    expertise: ["Chemistry Specialist", "JEE/NEET Mentor", "Concept builder"],
+    teachingPhilosophy: "Chemistry is the study of matter and its transformations. It's not about memorizing reactions, but understanding how molecules interact. I help students visualize molecular structures and make equations logical.",
     avatarSeed: "jaydeep"
   }
 ];
@@ -263,61 +263,3 @@ export const ADMISSION_STEPS = [
   }
 ];
 
-export const GALLERY_ITEMS = [
-  {
-    id: 1,
-    title: "Smart Classroom Sessions",
-    category: "classrooms",
-    description: "Chandan Sir taking doubt session with students in a small-batch setup.",
-    svgType: "classroom1"
-  },
-  {
-    id: 2,
-    title: "Monthly Seminar on Career Paths",
-    category: "seminars",
-    description: "Co-founders discussing engineering and medical pathways with parents.",
-    svgType: "seminar1"
-  },
-  {
-    id: 3,
-    title: "Annual Student Achievement Awards",
-    category: "events",
-    description: "Honoring top scorers of JEE Main & NEET exams with trophies.",
-    svgType: "event1"
-  },
-  {
-    id: 4,
-    title: "Weekly Doubt Resolution Forum",
-    category: "student-activities",
-    description: "Students collaborating during peer-learning group sessions in library.",
-    svgType: "activity1"
-  },
-  {
-    id: 5,
-    title: "Cracking JEE Mentorship Session",
-    category: "motivational-sessions",
-    description: "Jaydeep Sir delivering interactive session on exam mindset and confidence.",
-    svgType: "motivation1"
-  },
-  {
-    id: 6,
-    title: "Modern Lab & Physics Experiments",
-    category: "classrooms",
-    description: "Visual learning through physics demos and basic circuit designs.",
-    svgType: "classroom2"
-  },
-  {
-    id: 7,
-    title: "Orientation Day",
-    category: "events",
-    description: "Welcome address to newly admitted class 11 and foundation batches.",
-    svgType: "event2"
-  },
-  {
-    id: 8,
-    title: "Daily Practice Sheets (DPPs) Review",
-    category: "student-activities",
-    description: "One-on-one query solving by our faculties after normal hours.",
-    svgType: "activity2"
-  }
-];

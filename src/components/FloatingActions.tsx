@@ -60,7 +60,7 @@ export default function FloatingActions() {
         }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-xl hover:bg-blue-700 transition-colors cursor-pointer border border-white/20"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white shadow-xl hover:bg-primary-dark transition-colors cursor-pointer border border-white/20"
         aria-label="Call Sunlight Academy"
       >
         <Phone className="h-6 w-6" />

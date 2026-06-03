@@ -30,18 +30,18 @@ export default function Logo({ className = "", showText = true, size = "md" }: L
       >
         <defs>
           <linearGradient id="sun-gradient" x1="60" y1="20" x2="60" y2="70" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#FACC15" />
-            <stop offset="100%" stopColor="#EAB308" />
+            <stop offset="0%" stopColor="#FFF275" />
+            <stop offset="100%" stopColor="#FDB813" />
           </linearGradient>
 
           <linearGradient id="cap-gradient" x1="60" y1="15" x2="60" y2="55" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#3b82f6" />
-            <stop offset="100%" stopColor="#1d4ed8" />
+            <stop offset="0%" stopColor="#FF8C42" />
+            <stop offset="100%" stopColor="#E05B00" />
           </linearGradient>
 
           <linearGradient id="book-gradient" x1="60" y1="65" x2="60" y2="105" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#38bdf8" />
-            <stop offset="100%" stopColor="#0284c7" />
+            <stop offset="0%" stopColor="#FFD54F" />
+            <stop offset="100%" stopColor="#FFC107" />
           </linearGradient>
         </defs>
 
@@ -49,7 +49,7 @@ export default function Logo({ className = "", showText = true, size = "md" }: L
         <circle cx="60" cy="55" r="26" fill="url(#sun-gradient)" opacity="0.85" />
         
         {/* Sun Rays */}
-        <g stroke="#EAB308" strokeWidth="2.5" strokeLinecap="round" opacity="0.9">
+        <g stroke="#FDB813" strokeWidth="2.5" strokeLinecap="round" opacity="0.9">
           <line x1="60" y1="20" x2="60" y2="10" />
           <line x1="35" y1="35" x2="28" y2="28" />
           <line x1="85" y1="35" x2="92" y2="28" />
@@ -62,7 +62,7 @@ export default function Logo({ className = "", showText = true, size = "md" }: L
         {/* 2. OPEN BOOK */}
         <path
           d="M 60 92 C 75 84, 95 86, 105 92 L 105 64 C 95 58, 75 56, 60 64 C 45 56, 25 58, 15 64 L 15 92 C 25 86, 45 84, 60 92 Z"
-          fill="#1e3a8a"
+          fill="#7c2d12"
           opacity="0.2"
         />
         <path
@@ -84,8 +84,8 @@ export default function Logo({ className = "", showText = true, size = "md" }: L
         <path d="M 60 48 L 92 37 L 60 26 L 28 37 Z" fill="#000000" opacity="0.15" transform="translate(0, 3)" />
         <path d="M 40 37.5 C 40 47, 80 47, 80 37.5" fill="url(#cap-gradient)" stroke="#ffffff" strokeWidth="1" />
         <path d="M 60 44 L 95 33 L 60 22 L 25 33 Z" fill="url(#cap-gradient)" stroke="#ffffff" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M 60 33 L 42 39 L 40 49" stroke="#FACC15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="40" cy="51" r="2" fill="#FACC15" />
+        <path d="M 60 33 L 42 39 L 40 49" stroke="#FFC107" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="40" cy="51" r="2" fill="#FFC107" />
       </svg>
 
       {showText && (

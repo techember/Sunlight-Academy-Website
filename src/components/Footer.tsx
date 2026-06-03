@@ -66,14 +66,15 @@ export default function Footer() {
                 { name: "About Us", href: "/about" },
                 { name: "Our Courses", href: "/courses" },
                 { name: "Faculty Members", href: "/faculty" },
+                { name: "Careers", href: "/careers" },
                 { name: "Contact & Enquiry", href: "/contact" }
               ].map((link, idx) => (
                 <Link
                   key={idx}
                   href={link.href}
-                  className="text-sm font-semibold hover:text-primary-light flex items-center gap-1 group transition-colors"
+                  className="text-sm font-semibold hover:text-primary flex items-center gap-1 group transition-colors"
                 >
-                  <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-primary-light transition-colors" />
+                  <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-primary transition-colors" />
                   {link.name}
                 </Link>
               ))}
@@ -97,9 +98,9 @@ export default function Footer() {
                 <Link
                   key={idx}
                   href={link.href}
-                  className="text-sm font-semibold hover:text-primary-light flex items-center gap-1 group transition-colors"
+                  className="text-sm font-semibold hover:text-primary flex items-center gap-1 group transition-colors"
                 >
-                  <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-primary-light transition-colors" />
+                  <ChevronRight className="h-4 w-4 text-slate-500 group-hover:text-primary transition-colors" />
                   {link.name}
                 </Link>
               ))}
@@ -144,6 +145,8 @@ export default function Footer() {
             <Link href="/about" className="hover:text-slate-350 transition-colors">Vision & Mission</Link>
             <span>•</span>
             <Link href="/courses" className="hover:text-slate-350 transition-colors">Programs</Link>
+            <span>•</span>
+            <Link href="/careers" className="hover:text-slate-350 transition-colors">Careers</Link>
             <span>•</span>
             <Link href="/contact" className="hover:text-slate-350 transition-colors">Enquiry Form</Link>
           </p>

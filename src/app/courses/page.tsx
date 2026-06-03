@@ -107,13 +107,13 @@ function CoursesContent() {
                 onClick={() => handleTabChange(tab.id)}
                 className={`flex-1 py-3 px-4 rounded-xl font-display font-bold text-sm md:text-base flex flex-col sm:flex-row items-center justify-center gap-1.5 transition-all cursor-pointer ${
                   activeTab === tab.id
-                    ? "bg-white text-primary shadow-sm scale-[1.01]"
+                    ? "bg-white text-primary-dark shadow-sm scale-[1.01]"
                     : "text-slate-600 hover:text-slate-900 hover:bg-white/50"
                 }`}
               >
                 <span>{tab.name}</span>
                 <span className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full font-sans font-bold ${
-                  activeTab === tab.id ? "bg-blue-50 text-primary" : "bg-slate-200 text-slate-500"
+                  activeTab === tab.id ? "bg-amber-100/70 text-primary-dark" : "bg-slate-200 text-slate-500"
                 }`}>
                   {tab.badge}
                 </span>
@@ -129,19 +129,19 @@ function CoursesContent() {
           
           {/* Breadcrumbs Navigation */}
           <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-8 overflow-x-auto whitespace-nowrap bg-white py-3 px-5 rounded-xl border border-slate-200/60 shadow-sm self-start">
-            <Link href="/" className="hover:text-primary transition-colors flex items-center gap-1">
+            <Link href="/" className="hover:text-primary-dark transition-colors flex items-center gap-1">
               <HomeIcon className="h-3.5 w-3.5" /> Home
             </Link>
             <ChevronRight className="h-3 w-3 text-slate-300" />
             <span className="cursor-default">Courses</span>
             <ChevronRight className="h-3 w-3 text-slate-300" />
-            <Link href={`/courses?tab=${activeTab}`} className="hover:text-primary transition-colors">
+            <Link href={`/courses?tab=${activeTab}`} className="hover:text-primary-dark transition-colors">
               {courseNameMap[activeTab]}
             </Link>
             {classParam && classLabelMap[classParam] && (
               <>
                 <ChevronRight className="h-3 w-3 text-slate-300" />
-                <span className="text-primary font-bold cursor-default">{classLabelMap[classParam]}</span>
+                <span className="text-primary-dark font-bold cursor-default">{classLabelMap[classParam]}</span>
               </>
             )}
           </div>
@@ -154,7 +154,7 @@ function CoursesContent() {
                 <h2 className="font-display font-black text-slate-905 text-3xl sm:text-4xl mb-3">
                   {currentCourse.title}
                 </h2>
-                <p className="text-primary font-bold text-base md:text-lg mb-4">
+                <p className="text-primary-dark font-bold text-base md:text-lg mb-4">
                   {currentCourse.tagline}
                 </p>
                 <p className="text-slate-500 font-sans text-base leading-relaxed">
@@ -164,8 +164,8 @@ function CoursesContent() {
 
               {/* Available for classes (Active card highlights & Badges) */}
               <div className="border-t border-slate-100 pt-6">
-                <h3 className="font-display font-extrabold text-slate-805 text-lg mb-6 flex items-center gap-2">
-                  <Layers className="h-5 w-5 text-primary" /> Target Batches & Tracks
+                <h3 className="font-display font-extrabold text-slate-855 text-lg mb-6 flex items-center gap-2">
+                  <Layers className="h-5 w-5 text-primary-dark" /> Target Batches & Tracks
                 </h3>
                 
                 <div className="flex flex-col gap-4">
@@ -183,13 +183,13 @@ function CoursesContent() {
                         id={`class-card-${classId}`}
                         className={`relative rounded-2xl p-6 border text-left transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
                           isSelected 
-                            ? "bg-blue-50/30 border-primary border-2 shadow-lg ring-4 ring-primary/10 -translate-y-0.5" 
+                            ? "bg-amber-50/20 border-primary-dark border-2 shadow-lg ring-4 ring-primary-dark/10 -translate-y-0.5" 
                             : "bg-slate-50 border-slate-200 hover:border-slate-350 hover:bg-slate-100/50"
                         }`}
                       >
                         <div className="flex items-center gap-4">
                           <span className={`h-11 w-11 rounded-xl flex items-center justify-center font-display font-black text-base flex-shrink-0 transition-colors duration-300 ${
-                            isSelected ? "bg-primary text-white" : "bg-primary/10 text-primary"
+                            isSelected ? "bg-primary-dark text-white" : "bg-primary/10 text-primary-dark"
                           }`}>
                             {idx + 1}
                           </span>
@@ -204,7 +204,7 @@ function CoursesContent() {
                         </div>
 
                         {isSelected && (
-                          <span className="absolute -top-3 -right-3 bg-primary text-white text-[9px] font-black uppercase tracking-wider px-2.5 py-1.5 rounded-full shadow-md">
+                          <span className="absolute -top-3 -right-3 bg-primary-dark text-white text-[9px] font-black uppercase tracking-wider px-2.5 py-1.5 rounded-full shadow-md">
                             Selected Batch
                           </span>
                         )}
@@ -213,7 +213,7 @@ function CoursesContent() {
                           href={`/contact?enquire=enroll&course=${activeTab}&class=${classId}`}
                           className={`font-bold text-xs py-2.5 px-4 rounded-lg text-center transition-all duration-200 ${
                             isSelected 
-                              ? "bg-primary text-white hover:bg-primary-dark shadow-sm" 
+                              ? "bg-primary-dark text-white hover:bg-accent shadow-sm" 
                               : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50"
                           }`}
                         >
@@ -227,8 +227,8 @@ function CoursesContent() {
 
               {/* Key Course Features */}
               <div className="border-t border-slate-100 pt-6">
-                <h3 className="font-display font-extrabold text-slate-805 text-lg mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" /> Academic Deliverables
+                <h3 className="font-display font-extrabold text-slate-855 text-lg mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary-dark" /> Academic Deliverables
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {currentCourse.features.map((feature, idx) => (
@@ -249,8 +249,8 @@ function CoursesContent() {
               
               {/* Foundation Benefits card (Only render if active tab is foundation) */}
               {activeTab === "foundation" && currentCourse.benefits && (
-                <div className="bg-gradient-to-br from-blue-900 to-primary text-white p-8 rounded-3xl shadow-md text-left">
-                  <h3 className="font-display font-black text-xl mb-4 text-accent flex items-center gap-2">
+                <div className="bg-gradient-to-br from-primary-dark to-accent text-white p-8 rounded-3xl shadow-md text-left">
+                  <h3 className="font-display font-black text-xl mb-4 text-secondary flex items-center gap-2">
                     <Award className="h-6 w-6" /> Key Foundations Benefits
                   </h3>
                   <div className="flex flex-col gap-4">
@@ -258,10 +258,10 @@ function CoursesContent() {
                       const [title, desc] = benefit.split(": ");
                       return (
                         <div key={idx} className="flex gap-3">
-                          <span className="h-2 w-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                          <span className="h-2 w-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
                           <div className="flex flex-col">
                             <span className="font-bold text-sm text-white">{title}</span>
-                            <span className="text-xs text-blue-100 leading-relaxed font-sans">{desc}</span>
+                            <span className="text-xs text-amber-100 leading-relaxed font-sans">{desc}</span>
                           </div>
                         </div>
                       );
@@ -284,26 +284,26 @@ function CoursesContent() {
                 <div className="flex flex-col gap-3">
                   <Link
                     href={`/contact?enquire=enroll&course=${activeTab}`}
-                    className="bg-primary hover:bg-primary-dark text-white font-bold text-center py-3.5 px-6 rounded-xl shadow-sm hover:shadow transition-all duration-200"
+                    className="bg-primary-dark hover:bg-accent text-white font-bold text-center py-3.5 px-6 rounded-xl shadow-sm hover:shadow transition-all duration-200"
                   >
                     Apply Online Now
                   </Link>
                   <Link
                     href={`/contact?enquire=counsel&course=${activeTab}`}
-                    className="bg-slate-50 hover:bg-slate-100 border border-slate-205 text-slate-805 font-bold text-center py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-2"
+                    className="bg-slate-50 hover:bg-slate-105 border border-slate-200 text-slate-805 font-bold text-center py-3.5 px-6 rounded-xl transition-all flex items-center justify-center gap-2"
                   >
-                    <Calendar className="h-5 w-5 text-primary" /> Book Counselling
+                    <Calendar className="h-5 w-5 text-primary-dark" /> Book Counselling
                   </Link>
                 </div>
 
                 {/* Trust badge icons */}
                 <div className="border-t border-slate-100 pt-6 flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-xs text-slate-555">
-                    <Clock className="h-4.5 w-4.5 text-primary flex-shrink-0" />
+                    <Clock className="h-4.5 w-4.5 text-primary-dark flex-shrink-0" />
                     <span>Batch timings tailored for school-going students.</span>
                   </div>
                   <div className="flex items-center gap-3 text-xs text-slate-555">
-                    <ShieldCheck className="h-4.5 w-4.5 text-primary flex-shrink-0" />
+                    <ShieldCheck className="h-4.5 w-4.5 text-primary-dark flex-shrink-0" />
                     <span>Taught directly by Chandan Sir & Jaydeep Sir.</span>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export default function Courses() {
   return (
     <Suspense fallback={
       <div className="flex items-center justify-center min-h-screen bg-slate-50">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary border-r-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary-dark border-r-transparent" />
       </div>
     }>
       <CoursesContent />
